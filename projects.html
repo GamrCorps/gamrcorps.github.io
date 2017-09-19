@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .heading-no-margin {
+            margin-top: 0;
+        }
+
+        .project-heading {
+            text-align: center;
+        }
+        
+        .bottom-buffer {
+            margin-bottom: 50px;
+        }
+        
+        .bottom-buffer-cell {
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <script>
+        // Load data.
+        $(function() {
+            $.getJSON("json/projects.json", function(data) {
+                var ctgs = data.categories;
+                ctgs.sort(function(a, b) {
+                    if (a["sorting-weight"] < b["sorting-weight"]) {
+                            return -1;
+                        }
+                        if (a["sorting-weight"] > b["sorting-weight"]) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                for (var category of ctgs) {
+                    var category_header = $("<div>", {"class": "panel panel-default"});
+                    category_header.append($("<h2>", {"class": "project-heading", "html": category.name}));
+                    category_header.append($("<h3>", {"class": "project-heading", "html": category.description}));
+                    $(".project-container").append(category_header);
+                    
+                    var projects_div = $("<div>", {"class": "container-fluid"});
+                    var pr = $("<div>", {"class": "row bottom-buffer"});
+                    var projects = data.projects.filter(function (el) {
+                        return el.category == category.id;
+                    });
+                    projects.sort(function(a, b) {
+                        if (a["sorting-weight"] < b["sorting-weight"]) {
+                            return -1;
+                        }
+                        if (a["sorting-weight"] > b["sorting-weight"]) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    for (var proj of projects) {
+                        var wrapper = $("<div>", {"class": "col-xs-12 col-sm-6 bottom-buffer-cell"});
+                        
+                        var img = $("<div>", {"class": "hidden-xs hidden-sm col-md-4"});
+                        img.append($("<img>", {"class": "img-responsive center-block", "src": (proj.image != null ? proj.image : "img/template-project.svg"), "alt": proj.name}));
+                        wrapper.append(img);
+                        
+                        var info = $("<div>", {"class": "col-xs-12 col-md-8"});
+                        info.append($("<h3>", {"class": "heading-no-margin", "html": proj.name}));
+                        //info.append($("<h4>", {"class": "heading-no-margin", "html": "Created on " + $.DatePicker.formatDate("MM d, yy", $.DatePicker.parseDate("yy-m-d", proj.date))}));
+                        info.append($("<h4>", {"class": "heading-no-margin", "html": "Created on " + proj.date}));
+                        info.append($("<p>", {"html": proj.description}));
+                        if (proj.github != null || (proj["other-links"] != null && proj["other-links"].length > 0)) {
+                            var btngroup = $("<div>", {"class": "btn-group"});
+                            if (proj.github != null) btngroup.append($("<a>", {"href": proj.github, "class": "btn btn-default", "html": "<img src=\"img/github.png\" width=\"20\"/> GitHub"}));
+                            if (proj["other-links"] != null && proj["other-links"].length > 0) {
+                                for (var link of proj["other-links"]) {
+                                    btngroup.append($("<a>", {"href": link.link, "class": "btn btn-default", "html": (link.icon != null ? "<img src=\"" +  link.icon + "\" width=\"20\"/> " : "") + link.name}));
+                                }
+                            }
+                            info.append(btngroup);
+                        }
+                        
+                        wrapper.append(info);
+                        
+                        pr.append(wrapper);
+                    }
+                    projects_div.append(pr);
+                    $(".project-container").append(projects_div);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="alert alert-danger hidden-sm hidden-md hidden-lg alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Warning!</strong><br>You are viewing on a small device, so some things may not look correctly!
+    </div>
+    <div class="jumbotron text-center">
+        <h1>My Projects</h1>
+        <p>Here is a list of the many projects that I have worked on.<br>I will keep this as updated as best as I can.</p>
+    </div>
+    <div class="btn-group btn-group-justified">
+        <a href="index.html" class="btn btn-info">Home</a>
+        <a href="about-me.html" class="btn btn-primary">About Me</a>
+        <a href="projects.html" class="btn btn-success">Projects</a>
+        <a href="resources.html" class="btn btn-warning">Resources</a>
+        <a href="coming-soon.html" class="btn btn-danger">Games & Guides</a>
+    </div>
+    <br>
+    <div class="project-container"></div>
+</body>
+
+</html>

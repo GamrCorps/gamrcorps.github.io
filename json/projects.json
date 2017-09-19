@@ -1,0 +1,217 @@
+{
+  "categories": [
+    {
+      "id": "KTANE",
+      "name": "<i>Keep&nbspTalking&nbspand Nobody&nbspExplodes</i> Mods",
+      "description": "A list of mods that I had a part in creating for the game <i>Keep&nbspTalking&nbspand Nobody&nbspExplodes</i>.<br>These are all written in C# and use Unity.",
+      "sorting-weight": 3
+    },
+    {
+      "id": "lang",
+      "name": "Programming Languages",
+      "description": "Programming languages (mostly esoteric) that I have created or worked on.",
+      "sorting-weight": 0
+      
+    },
+    {
+      "id": "misc",
+      "name": "Miscellaneous",
+      "description": "Several random projects that don't fit into another category.",
+      "sorting-weight": 4
+      
+    },
+    {
+      "id": "bots",
+      "name": "Bots and Helpers",
+      "description": "Bot and helper programs that I have made or worked on.",
+      "sorting-weight": 1
+      
+    }
+  ],
+  "projects": [
+    {
+      "name": "FizzBuzz",
+      "category": "KTANE",
+      "date": "2017-5-10",
+      "description": "A classic schoolyard game-turned bomb module.",
+      "image": "img/project-images/fizzbuzz.png",
+      "github": "https://github.com/GamrCorps/KTANE_FizzBuzz",
+      "other-links": [
+        {
+          "name": "Steam Workshop Page",
+          "icon": "img/steam.gif",
+          "link": "http://steamcommunity.com/sharedfiles/filedetails/?id=923342815"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Color Morse",
+      "category": "KTANE",
+      "date": "2017-9-2",
+      "description": "Solve mathematical expressions with dots and dashes instead of digits.",
+      "image": "img/project-images/colormorse.png",
+      "github": "https://github.com/GamrCorps/KTANE_ColorMorse",
+      "other-links": [
+        {
+          "name": "Steam Workshop Page",
+          "icon": "img/steam.gif",
+          "link": "http://steamcommunity.com/sharedfiles/filedetails/?id=1096373999"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Ice Cream",
+      "category": "KTANE",
+      "date": "2017-6-27",
+      "description": "\"I scream, you scream, we all scream for ice cream!\" However, this shop only sells bomb-flavored ice cream.",
+      "image": "img/project-images/icecream.png",
+      "github": "https://github.com/GamrCorps/KTANE_IceCream",
+      "other-links": [
+        {
+          "name": "Steam Workshop Page",
+          "icon": "img/steam.gif",
+          "link": "http://steamcommunity.com/sharedfiles/filedetails/?id=956327753"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Boolean Venn Diagrams",
+      "category": "KTANE",
+      "date": "2017-6-22",
+      "description": "Solve for all of the solutions to a logical expression, in a \"convienent\" venn diagram layout.",
+      "image": "img/project-images/booleanvenn.png",
+      "github": "https://github.com/GamrCorps/KTANE_BooleanVenn",
+      "other-links": [
+        {
+          "name": "Steam Workshop Page",
+          "icon": "img/steam.gif",
+          "link": "http://steamcommunity.com/sharedfiles/filedetails/?id=952882149"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Edgework",
+      "category": "KTANE",
+      "date": "2017-6-22",
+      "description": "Remember to write down EVERYTHING about the bomb...",
+      "image": "img/project-images/edgework.png",
+      "github": "https://github.com/ionlee1/Edgework",
+      "other-links": [
+        {
+          "name": "Steam Workshop Page",
+          "icon": "img/steam.gif",
+          "link": "http://steamcommunity.com/sharedfiles/filedetails/?id=926122787"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Crossover Modules",
+      "category": "KTANE",
+      "date": "2017-9-2",
+      "description": "A module pack that contains \"crossed over\" forms of two or more vanilla modules. Currently includes:<br> - Symbolic Password (Keypads + Passwords): passwords now require symbols AND two-dimensional structure to be secure enough. Who knew?<br> - Complicated Buttons (Complicated Wires + The Button): press certain buttons in a certain order with certain conditions.",
+      "image": "img/project-images/crossovermodules.png",
+      "github": "https://github.com/GamrCorps/KTANE_ColorMorse",
+      "other-links": [
+        {
+          "name": "Steam Workshop Page",
+          "icon": "img/steam.gif",
+          "link": "http://steamcommunity.com/sharedfiles/filedetails/?id=831134377"
+        }
+      ],
+      "sorting-weight": 1
+    },
+    {
+      "name": "Basic Function Language",
+      "category": "lang",
+      "date": "2017-2-6",
+      "description": "A basic programming language that uses functions to accomplish tasks.",
+      "image": null,
+      "github": "https://github.com/GamrCorps/BasicFunctionLanguage",
+      "other-links": null,
+      "sorting-weight": 0
+    },
+    {
+      "name": "Convex",
+      "category": "lang",
+      "date": "2016-3-9",
+      "description": "An esoteric programming language designed to be very effective in code-golfing competitions.",
+      "image": null,
+      "github": "https://github.com/GamrCorps/Convex",
+      "other-links": [
+        {
+          "name": "Work-In-Progress Python Implementation",
+          "icon": "img/github.png",
+          "link": "https://github.com/GamrCorps/ConvexPy"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Glava",
+      "category": "lang",
+      "date": "2016-1-3",
+      "description": "An esoteric programming language that is designed as an abbreviated version of Java to be used in code-golfing competitions.",
+      "image": null,
+      "github": "https://github.com/GamrCorps/Glava",
+      "other-links": [
+        {
+          "name": "Legacy Version",
+          "icon": "img/github.png",
+          "link": "https://github.com/GamrCorps/Glava_Legacy"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "QuoteBot",
+      "category": "bots",
+      "date": "2017-9-2",
+      "description": "A bot that I wrote for my personal Discord server that handles quote submission for our quotebook.",
+      "image": null,
+      "github": "https://github.com/GamrCorps/DiscordQuoteBot",
+      "other-links": null,
+      "sorting-weight": 0
+    },
+    {
+      "name": "ZekNikZBot",
+      "category": "bots",
+      "date": "2016-12-8",
+      "description": "A bot that I wrote for my personal Discord server that does a variety of moderation tasks.",
+      "image": null,
+      "github": "https://github.com/GamrCorps/Discord-Bot",
+      "other-links": null,
+      "sorting-weight": 0
+    },
+    {
+      "name": "Battleship Game",
+      "category": "misc",
+      "date": "2017-2-23",
+      "description": "A text-based Battleship game featuring multiple players, ship placement, special abilities, and more!<br>Winner of the Coding category of the 2017 AFUHSD STEM Expo.",
+      "image": null,
+      "github": "https://github.com/GamrCorps/STEMExpoBattleship",
+      "other-links": null,
+      "sorting-weight": 0
+    },
+    {
+      "name": "PPCG Design Userscript",
+      "category": "misc",
+      "date": "2017-2-23",
+      "description": "A collaborative project to show off our suggestions for the redesign of the Programming Puzzles and Code Golf website.",
+      "image": null,
+      "github": "https://github.com/vihanb/PPCG-Design",
+      "other-links": [
+        {
+          "name": "Programming Puzzles and Code Golf",
+          "icon": "https://cdn.sstatic.net/Sites/codegolf/img/favicon.ico?v=38413b30209a",
+          "link": "https://codegolf.stackexchange.com/"
+        }
+      ],
+      "sorting-weight": 0
+    }
+  ]
+}
