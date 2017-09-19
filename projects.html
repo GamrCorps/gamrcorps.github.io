@@ -10,6 +10,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
 
     <style>
         .heading-no-margin {
@@ -72,8 +74,7 @@
                         
                         var info = $("<div>", {"class": "col-xs-12 col-md-8"});
                         info.append($("<h3>", {"class": "heading-no-margin", "html": proj.name}));
-                        //info.append($("<h4>", {"class": "heading-no-margin", "html": "Created on " + $.DatePicker.formatDate("MM d, yy", $.DatePicker.parseDate("yy-m-d", proj.date))}));
-                        info.append($("<h4>", {"class": "heading-no-margin", "html": "Created on " + proj.date}));
+                        info.append($("<h4>", {"class": "heading-no-margin", "html": "Created on " + moment(proj.date, 'YYYY-MM-DD').format('MMMM D, Y')}));
                         info.append($("<p>", {"html": proj.description}));
                         if (proj.github != null || (proj["other-links"] != null && proj["other-links"].length > 0)) {
                             var btngroup = $("<div>", {"class": "btn-group"});
