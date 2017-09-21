@@ -1,0 +1,194 @@
+{
+  "categories": [
+    {
+      "id": "weblib",
+      "name": "Useful Web Libraries",
+      "description": "A list of web libraries that I commonly use.",
+      "sorting-weight": 0
+    },
+    {
+      "id": "python",
+      "name": "Useful Python Libraries",
+      "description": "A list of my favorite Python libraries.",
+      "sorting-weight": 1
+    },
+    {
+      "id": "assets",
+      "name": "Assets for Projects",
+      "description": "Assets that can be used in a variety of different projects.",
+      "sorting-weight": 2
+    },
+    {
+      "id": "refs",
+      "name": "References",
+      "description": "High-quality reference pages and websites.",
+      "sorting-weight": 3
+    }
+  ],
+  "resources": [
+    {
+      "name": "Bootstrap",
+      "category": "weblib",
+      "author": "the Bootstrap Team",
+      "description": "A web library designed to make websites look good with minimal code. I use this library on nearly every web app I create, including this site.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "Bootstrap",
+          "icon": "http://getbootstrap.com/favicon.ico",
+          "link": "http://getbootstrap.com/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "jQuery",
+      "category": "weblib",
+      "author": "the jQuery Foundation",
+      "description": "A javscript library that makes communicating between Javascript and HTML much easier.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "jQuery",
+          "icon": "https://jquery.com/favicon.ico",
+          "link": "https://jquery.com/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Moment.js",
+      "category": "weblib",
+      "author": "the Moment.js team",
+      "description": "A javscript library that is great for date and time parsing and formatting.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "Moment.js",
+          "icon": "https://momentjs.com/static/img/moment-favicon.png",
+          "link": "https://momentjs.com/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "NumPy",
+      "category": "python",
+      "author": "the NumPy developers",
+      "description": "This library makes any scientific or mathematical calculations much easier to do and more efficient overall.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "NumPy",
+          "icon": "http://www.numpy.org/_static/favicon.ico",
+          "link": "http://www.numpy.org/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "discord.py",
+      "category": "python",
+      "author": "@Rapptz",
+      "description": "A library for easily interfacing with the Discord API.",
+      "image": null,
+      "github": "https://github.com/Rapptz/discord.py",
+      "other-links": null,
+      "sorting-weight": 0
+    },
+    {
+      "name": "Icon Essential Collection",
+      "category": "assets",
+      "author": "Smashicons",
+      "description": "A set of great icons to use in any project. I use these in many different icons.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "Flaticon Page",
+          "icon": "https://media.flaticon.com/img/favicon.png",
+          "link": "https://www.flaticon.com/packs/essential-collection"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "KTANE Modkit",
+      "category": "assets",
+      "author": "Steel Crate Games",
+      "description": "The modding toolkit for creating <i>Keep Talking and Nobody Explodes</i> mods.",
+      "image": null,
+      "github": "https://github.com/keeptalkinggame/ktanemodkit",
+      "other-links": [
+        {
+          "name": "Manual Template",
+          "icon": "https://ktane.timwi.de/favicon.ico",
+          "link": "https://ktane.timwi.de/More/Template%20Manual.zip"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "W3Schools",
+      "category": "refs",
+      "author": "Refsnes Data",
+      "description": "A reference for anything to do with HTML, CSS, or Javascipt.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "W3Schools",
+          "icon": "https://www.w3schools.com/favicon.ico",
+          "link": "https://www.w3schools.com/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Stack Overflow",
+      "category": "refs",
+      "author": "Stack Exchange and the Stack Overflow community",
+      "description": "An awesome question-and-answer site for any questions relating to programming.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "Stack Overflow",
+          "icon": "https://stackoverflow.com/favicon.ico",
+          "link": "https://stackoverflow.com/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Python Documentation",
+      "category": "refs",
+      "author": "the Python Software Foundation",
+      "description": "The documentation for Python, a programming language designed with simplicity in mind and with efficiency at its core. (Also, it's my favorite programming language)",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "Python Website",
+          "icon": "https://www.python.org/static/favicon.ico",
+          "link": "https://www.python.org/"
+        },
+        {
+          "name": "Python 2.7 Docs",
+          "icon": "https://www.python.org/static/favicon.ico",
+          "link": "https://docs.python.org/2.7/"
+        },
+        {
+          "name": "Python 3.6 Docs",
+          "icon": "https://www.python.org/static/favicon.ico",
+          "link": "https://docs.python.org/3/"
+        }
+      ],
+      "sorting-weight": 0
+    }
+  ]
+}

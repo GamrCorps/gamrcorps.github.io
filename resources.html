@@ -34,7 +34,7 @@
     <script>
         // Load data.
         $(function() {
-            $.getJSON("json/projects.json", function(data) {
+            $.getJSON("json/resources.json", function(data) {
                 var ctgs = data.categories;
                 ctgs.sort(function(a, b) {
                     if (a["sorting-weight"] < b["sorting-weight"]) {
@@ -49,14 +49,14 @@
                     var category_header = $("<div>", {"class": "panel panel-default"});
                     category_header.append($("<h2>", {"class": "project-heading", "html": category.name}));
                     category_header.append($("<h3>", {"class": "project-heading", "html": category.description}));
-                    $(".project-container").append(category_header);
+                    $(".resource-container").append(category_header);
                     
-                    var projects_div = $("<div>", {"class": "container-fluid"});
+                    var resource_div = $("<div>", {"class": "container-fluid"});
                     var pr = $("<div>", {"class": "row bottom-buffer"});
-                    var projects = data.projects.filter(function (el) {
+                    var resources = data.resources.filter(function (el) {
                         return el.category == category.id;
                     });
-                    projects.sort(function(a, b) {
+                    resources.sort(function(a, b) {
                         if (a["sorting-weight"] < b["sorting-weight"]) {
                             return -1;
                         }
@@ -65,24 +65,26 @@
                         }
                         return 0;
                     });
-                    for (var proj of projects) {
+                    for (var resc of resources) {
                         var wrapper = $("<div>", {"class": "col-xs-12 col-sm-6 bottom-buffer-cell"});
                         
-                        if (proj.image != null) {
+                        if (resc.image != null) {
                             var img = $("<div>", {"class": "hidden-xs hidden-sm col-md-4"});
-                            img.append($("<img>", {"class": "img-responsive center-block", "src": (proj.image != null ? proj.image : "img/template-project.svg"), "alt": proj.name}));
+                            img.append($("<img>", {"class": "img-responsive center-block", "src": (resc.image != null ? resc.image : "img/template-project.svg"), "alt": resc.name}));
                             wrapper.append(img);
                         }
                         
-                        var info = $("<div>", {"class": "col-xs-12 col-md-" + (proj.image == null ? 12 : 8)});
-                        info.append($("<h3>", {"class": "heading-no-margin", "html": proj.name}));
-                        info.append($("<h4>", {"class": "heading-no-margin", "html": "Created on " + moment(proj.date, 'YYYY-MM-DD').format('MMMM D, Y')}));
-                        info.append($("<p>", {"html": proj.description}));
-                        if (proj.github != null || (proj["other-links"] != null && proj["other-links"].length > 0)) {
+                        var info = $("<div>", {"class": "col-xs-12 col-md-" + (resc.image == null ? 12 : 8)});
+                        info.append($("<h3>", {"class": "heading-no-margin", "html": resc.name}));
+                        if (resc.author != null) {
+                            info.append($("<h4>", {"class": "heading-no-margin", "html": "Created by " + resc.author}));
+                        }
+                        info.append($("<p>", {"html": resc.description}));
+                        if (resc.github != null || (resc["other-links"] != null && resc["other-links"].length > 0)) {
                             var btngroup = $("<div>", {"class": "btn-group"});
-                            if (proj.github != null) btngroup.append($("<a>", {"href": proj.github, "class": "btn btn-default", "html": "<img src=\"img/github.png\" width=\"20\"/> GitHub"}));
-                            if (proj["other-links"] != null && proj["other-links"].length > 0) {
-                                for (var link of proj["other-links"]) {
+                            if (resc.github != null) btngroup.append($("<a>", {"href": resc.github, "class": "btn btn-default", "html": "<img src=\"img/github.png\" width=\"20\"/> GitHub"}));
+                            if (resc["other-links"] != null && resc["other-links"].length > 0) {
+                                for (var link of resc["other-links"]) {
                                     btngroup.append($("<a>", {"href": link.link, "class": "btn btn-default", "html": (link.icon != null ? "<img src=\"" +  link.icon + "\" width=\"20\"/> " : "") + link.name}));
                                 }
                             }
@@ -93,8 +95,8 @@
                         
                         pr.append(wrapper);
                     }
-                    projects_div.append(pr);
-                    $(".project-container").append(projects_div);
+                    resource_div.append(pr);
+                    $(".resource-container").append(resource_div);
                 }
             });
         });
@@ -107,8 +109,8 @@
         <strong>Warning!</strong><br>You are viewing on a small device, so some things may not look correctly!
     </div>
     <div class="jumbotron text-center">
-        <h1>My Projects</h1>
-        <p>Here is a list of the many projects that I have worked on.<br>I will keep this as updated as best as I can.</p>
+        <h1>Resources</h1>
+        <p>I use a lot of common libraries, assets, and other resources for all of my projects. Here is a list of my favorites!<br>I will keep this as updated as best as I can.</p>
     </div>
     <div class="btn-group btn-group-justified">
         <a href="index.html" class="btn btn-info">Home</a>
@@ -118,7 +120,7 @@
         <a href="coming-soon.html" class="btn btn-danger">Games & Guides</a>
     </div>
     <br>
-    <div class="project-container"></div>
+    <div class="resource-container"></div>
 </body>
 
 </html>
