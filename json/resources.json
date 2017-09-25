@@ -46,7 +46,7 @@
       "name": "jQuery",
       "category": "weblib",
       "author": "the jQuery Foundation",
-      "description": "A javscript library that makes communicating between Javascript and HTML much easier.",
+      "description": "A Javascript library that makes communicating between Javascript and HTML much easier.",
       "image": null,
       "github": null,
       "other-links": [
@@ -62,7 +62,7 @@
       "name": "Moment.js",
       "category": "weblib",
       "author": "the Moment.js team",
-      "description": "A javscript library that is great for date and time parsing and formatting.",
+      "description": "A Javascript library that is great for date and time parsing and formatting.",
       "image": null,
       "github": null,
       "other-links": [
@@ -186,6 +186,22 @@
           "name": "Python 3.6 Docs",
           "icon": "https://www.python.org/static/favicon.ico",
           "link": "https://docs.python.org/3/"
+        }
+      ],
+      "sorting-weight": 0
+    },
+    {
+      "name": "Creative Commons Licenses Overview",
+      "category": "refs",
+      "author": "me",
+      "description": "A infographic chart that I made that describes the many Creative Commons licenses.",
+      "image": null,
+      "github": null,
+      "other-links": [
+        {
+          "name": "Download",
+          "icon": "img/attachment.svg",
+          "link": "downloads/creativecommons.pdf"
         }
       ],
       "sorting-weight": 0
