@@ -113,7 +113,7 @@
       "name": "Crossover Modules",
       "category": "KTANE",
       "date": "2017-9-2",
-      "description": "A module pack that contains \"crossed over\" forms of two or more vanilla modules. Currently includes:<br> - Symbolic Password (Keypads + Passwords): passwords now require symbols AND two-dimensional structure to be secure enough. Who knew?<br> - Complicated Buttons (Complicated Wires + The Button): press certain buttons in a certain order with certain conditions.",
+      "description": "A module pack that contains \"crossed over\" forms of two or more vanilla modules. Currently includes:<ul><li>Symbolic Password (Keypads + Passwords): passwords now require symbols AND two-dimensional structure to be secure enough. Who knew?</li><li>Complicated Buttons (Complicated Wires + The Button): press certain buttons in a certain order with certain conditions.</li></ul>",
       "image": "img/project-images/crossovermodules.png",
       "github": "https://github.com/GamrCorps/KTANE_ColorMorse",
       "other-links": [

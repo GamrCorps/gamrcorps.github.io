@@ -29,6 +29,12 @@
         .bottom-buffer-cell {
             margin-bottom: 20px;
         }
+        
+        .zfooter {
+            padding: 1rem;
+            background-color: #efefef;
+            text-align: center;
+        }
     </style>
     
     <script>
@@ -96,6 +102,7 @@
                     projects_div.append(pr);
                     $(".project-container").append(projects_div);
                 }
+                $(".project-container").append($("<div class=\"zfooter\">Website created and designed by Matthew McCaskill. All favicons belong to their respective webpages. All images are my own. Website is licensed under CC-BY-NC-SA. <img src=\"https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg\" alt=\"\" style=\"height:20px\"/></div>"));
             });
         });
     </script>
@@ -114,13 +121,13 @@
     </div>
     <div class="btn-group btn-group-justified">
         <a href="index.html" class="btn btn-info">Home</a>
-        <a href="about-me.html" class="btn btn-primary">About Me</a>
+        <a href="about-me.html" class="btn btn-primary disabled">About Me</a>
         <a href="projects.html" class="btn btn-success">Projects</a>
         <a href="resources.html" class="btn btn-warning">Resources</a>
-        <a href="guides.html" class="btn btn-danger">Games & Guides</a>
+        <a href="guides.html" class="btn btn-danger disabled">Games &amp Guides</a>
     </div>
     <br>
     <div class="project-container"></div>
+    
 </body>
-
 </html>
