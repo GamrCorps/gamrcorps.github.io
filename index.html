@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Latest compiled and minified CSS -->
+        <!-- Bootstrap CSS Library -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Latest compiled JavaScript -->
+        <!-- Bootstrap Javascript Library -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
         <style>
             .icon-image {
                 width: 50%;
             }
-            
+
             @media (max-width: 768px) {
                 [class*="col-"] {
                     margin-bottom: 15px;
                 }
             }
-            
+
             .text-center {
                 text-align: center;
             }
 
-            .zfooter {
+            /* Footer style changes based on width of screen. */
+            .default-footer {
                 position: absolute;
                 right: 0;
                 bottom: 0;
@@ -34,53 +35,65 @@
                 background-color: #efefef;
                 text-align: center;
             }
-            
-            .zzfooter {
+
+            .xs-footer {
                 padding: 1rem;
                 background-color: #efefef;
                 text-align: center;
             }
         </style>
-        
+
         <title>Matthew McCaskill's Site</title>
     </head>
+
     <body>
+        <!-- Small Device Alert -->
         <div class="alert alert-danger hidden-sm hidden-md hidden-lg alert-dismissable fade in">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>Warning!</strong><br>You are viewing on a small device, so some things may not look correctly!
         </div>
+
+        <!-- Header Jumbotron -->
         <div class="jumbotron text-center">
             <h1>Matthew McCaskill</h1>
             <h2>A Christian software developer who loves programming and game design.</h2>
             <p>This website documents the many activities that I have participated in and the projects that I created and worked on over the years. Use the links below to navigate the site.</p> 
         </div>
-        <!-- icons found at https://www.flaticon.com/packs/essential-collection -->
+
+        <!-- Links -->
         <div class="container">
             <div class="row">
+                <!-- About Me -->
                 <div class="col-xs-6 col-sm-3">
                     <img class="icon-image img-responsive center-block" src="img/info.svg" alt="About Me"/>
                     <br>
                     <a href="https://matthewmccaskill.ml/about-me" class="btn btn-primary btn-large center-block disabled" role="button">About Me</a>
                 </div>
+                <!-- Projects -->
                 <div class="col-xs-6 col-sm-3">
                     <img class="icon-image img-responsive center-block" src="img/network.svg" alt="Projects"/>
                     <br>
                     <a href="https://matthewmccaskill.ml/projects" class="btn btn-success btn-large center-block" role="button">Projects</a>
                 </div>
+                <!-- Resources -->
                 <div class="col-xs-6 col-sm-3">
                     <img class="icon-image img-responsive center-block" src="img/share.svg" alt="Resources"/>
                     <br>
                     <a href="https://matthewmccaskill.ml/resources" class="btn btn-warning btn-large center-block" role="button">Resources</a>
                 </div>
+                <!-- Games & Guides -->
                 <div class="col-xs-6 col-sm-3">
                     <img class="icon-image img-responsive center-block" src="img/notebook.svg" alt="Games & Guides"/>
                     <br>
                     <a href="https://matthewmccaskill.ml/guides" class="btn btn-danger btn-large center-block disabled" role="button">Games &amp Guides</a>
                 </div>
             </div>
-            <div class="zzfooter hidden-sm hidden-md hidden-lg">Website created and designed by Matthew McCaskill. Icons designed by Smashicons on Flaticon (used under Flaticon Basic License). Website is licensed under CC-BY-NC-SA. <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="" style="height:20px"/></div>
+
+            <!-- XS Footer -->
+            <div class="xs-footer hidden-sm hidden-md hidden-lg">Website created and designed by Matthew McCaskill. Icons designed by Smashicons on Flaticon (used under Flaticon Basic License). Website is licensed under CC-BY-NC-SA. <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="" style="height:20px"/></div>
         </div>
-        
-        <div class="zfooter hidden-xs">Website created and designed by Matthew McCaskill. Icons designed by Smashicons on Flaticon (used under Flaticon Basic License). Website is licensed under CC-BY-NC-SA. <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="" style="height:20px"/></div>
+
+        <!-- SM+ Footer -->
+        <div class="default-footer hidden-xs">Website created and designed by Matthew McCaskill. Icons designed by Smashicons on Flaticon (used under Flaticon Basic License). Website is licensed under CC-BY-NC-SA. <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="" style="height:20px"/></div>
     </body>
 </html>
