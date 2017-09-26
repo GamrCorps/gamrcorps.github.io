@@ -36,8 +36,8 @@
       "other-links": [
         {
           "name": "Bootstrap",
-          "icon": "http://getbootstrap.com/favicon.ico",
-          "link": "http://getbootstrap.com/"
+          "icon": "https://getbootstrap.com/favicon.ico",
+          "link": "https://getbootstrap.com/"
         }
       ],
       "sorting-weight": 0
@@ -84,8 +84,8 @@
       "other-links": [
         {
           "name": "NumPy",
-          "icon": "http://www.numpy.org/_static/favicon.ico",
-          "link": "http://www.numpy.org/"
+          "icon": "https://www.numpy.org/_static/favicon.ico",
+          "link": "https://www.numpy.org/"
         }
       ],
       "sorting-weight": 0
