@@ -212,6 +212,16 @@
         }
       ],
       "sorting-weight": 0
+    },
+    {
+      "name": "My Website",
+      "category": "misc",
+      "date": "2017-2-23",
+      "description": "Here is a link to the GitHub repository for this website!",
+      "image": null,
+      "github": "https://github.com/GamrCorps/gamrcorps.github.io",
+      "other-links": null,
+      "sorting-weight": 0
     }
   ]
 }

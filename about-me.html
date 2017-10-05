@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Bootstrap CSS Library -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Javascript Library -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Moment.js Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+
+        <!-- PageDown Markdown Library -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Sanitizer.js"></script>
+
+        <style>
+            .about-me {
+                margin: 20px;
+            }
+        </style>
+        
+        <script>
+            $.get("markdown/about-me.md", function(data) {
+                converter = new Markdown.Converter();
+                $(".about-me").html(converter.makeHtml(data));
+            });
+        </script>
+        
+        <title>About Me</title>
+    </head>
+
+    <body>
+        <!-- Small Device Alert -->
+        <div class="alert alert-danger hidden-sm hidden-md hidden-lg alert-dismissable fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Warning!</strong><br>You are viewing on a small device, so some things may not look correctly!
+        </div>
+
+        <!-- Header Jumbotron -->
+        <div class="jumbotron text-center">
+            <h1>My Projects</h1>
+            <p>Here is a list of the many projects that I have worked on.<br>I will keep this as updated as best as I can.</p>
+        </div>
+
+        <!-- Links -->
+        <div class="btn-group btn-group-justified">
+            <a href="https://matthewmccaskill.ml" class="btn btn-info">Home</a>
+            <a href="https://matthewmccaskill.ml/about-me" class="btn btn-primary disabled">About Me</a>
+            <a href="https://matthewmccaskill.ml/projects" class="btn btn-success">Projects</a>
+            <a href="https://matthewmccaskill.ml/resources" class="btn btn-warning">Resources</a>
+            <a href="https://matthewmccaskill.ml/guides" class="btn btn-danger disabled">Games &amp; Guides</a>
+        </div>
+        <br>
+
+        <!-- Holder for markdown loaded by preloader. -->
+        <div class="about-me"></div>
+    </body>
+</html>
