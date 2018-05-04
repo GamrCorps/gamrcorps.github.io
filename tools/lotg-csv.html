@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>LOTG CSV to Java Converter</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        function handleFileUpload() {
+            var resultTextArea = $('#resultTextArea');
+            var csvFileInput = $('#csvFileInput')[0];
+
+            var result = '';
+            if ('files' in csvFileInput) {
+                if (csvFileInput.files.length == 0) {
+                    result = 'Error: no file selected.';
+                } else if (csvFileInput.files.length > 1) {
+                    result = 'Error: too many files selected.';
+                } else if (!csvFileInput.files[0].name.endsWith('.csv')) {
+                    result = 'Error: file is not a CSV file.'
+                } else {
+                    var reader = new FileReader();
+                    reader.readAsText(csvFileInput.files[0], "UTF-8");
+                    reader.onload = function (evt) {
+                        resultTextArea.text(makeJava(evt.target.result));
+                    }
+                    reader.onerror = function (evt) {
+                        resultTextArea.text("Error: error reading file");
+                    }
+                }
+            }
+            resultTextArea.text(result);
+        }
+
+        function makeJava(fileContents) {
+            var text = fileContents.replace(/"/g, '');
+            text = text.replace(/([^\r\n,]*),([^\r\n,]*),([^\r\n,]*),([^\r\n,]*),([^\r\n,]*),([^\r\n,]*),([^\r\n,]*),([^\r\n,]*)(\r?\n|$)/g, '    {"$1", "$2", "$3", "$4", "$5", "$6", "$7", "$8"},\n');
+            text = text.replace(/    {.+},\r?\n/, '');
+            text = text.replace(/\|/g, ',');
+            return "String[][] bookArray = new String[][] {\n" + text.substring(0, text.length - 2) + "\n};";
+        }
+    </script>
+</head>
+<body>
+    <h1>LOTG CSV to Java Converter</h1>
+
+    <input id="csvFileInput" type="file" onchange="handleFileUpload()" />
+
+    <p>
+        Make sure to replace any commas in titles or publisher names are replaced with '|'.
+    </p>
+
+    <textarea id="resultTextArea" rows="40" cols="100" readonly></textarea>
+</body>
+</html>
