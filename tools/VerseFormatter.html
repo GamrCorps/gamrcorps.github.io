@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Verse Formatter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        h1, h2.centered {
+            text-align: center;
+        }
+
+        div.centered {
+            margin: 1em auto;
+            width: 1100px;
+        }
+
+        textarea.centered {
+            margin: 1em auto;
+            display: block;
+            width: 100%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function format() {
+            var verse = $("#input").val();
+            verse = verse.replace(/\s+/g, ' ');
+            verse = verse.replace(/“|”/g, '"');
+            verse = verse.replace(/‘|’/g, "'");
+            verse = verse.replace(/\[.\]/g, '');
+            $("#output").val(verse);
+        }
+    </script>
+</head>
+<body>
+    <h1 class="centered">Verse Formatter</h1>
+
+    <div class="centered">
+        <h2>Input</h2>
+        <textarea class="centered" id="input" rows="10" cols="150" autofocus placeholder="Paste the Bible verse here..."></textarea>
+        <button class="btn btn-primary" onclick="format();">Format</button>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="centered">
+        <h2>Output</h2>
+        <textarea class="centered" id="output" rows="10" cols="150" disabled></textarea>
+    </div>
+</body>
+</html>
